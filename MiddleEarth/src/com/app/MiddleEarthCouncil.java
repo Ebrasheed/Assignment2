@@ -17,3 +17,12 @@ class MiddleEarthCouncil {
         }
         return instance;
     }
+
+    /**
+     * provides access to getCharacterManager
+     * @return
+     */
+    public CharacterManager getCharacterManager() {
+        return characterManager;
+    }
+}
