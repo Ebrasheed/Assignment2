@@ -7,3 +7,13 @@ class MiddleEarthCouncil {
     private MiddleEarthCouncil() {
         characterManager = new CharacterManager();
     }
+/**
+     * returns single instance
+     * @return
+     */
+    public static MiddleEarthCouncil getInstance() {
+        if (instance == null) {
+            instance = new MiddleEarthCouncil();
+        }
+        return instance;
+    }
