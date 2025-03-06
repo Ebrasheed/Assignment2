@@ -22,3 +22,11 @@ class CharacterManager {
         characters[size++] = c;
         return true;
     }
+ /**
+     * this method doubles the size of the array when full
+     */
+    private void resizeArray() {
+        MiddleEarthCharacter[] newCharacters = new MiddleEarthCharacter[characters.length * 2];
+        System.arraycopy(characters, 0, newCharacters, 0, characters.length);
+        characters = newCharacters;
+    }
