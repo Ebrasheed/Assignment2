@@ -42,6 +42,25 @@ class CharacterManager {
         }
         return false;
     }
+     /**
+     * deletes a character
+     * @param name
+     * character to be deleted
+     * @return
+     * returns true if character was deleted and false if it was not deleted
+     */
+    public boolean deleteCharacter(String name) {
+        for (int i = 0; i < size; i++) {
+            if (characters[i].getName().equals(name)) {
+                for (int j = i; j < size - 1; j++) {
+                    characters[j] = characters[j + 1];
+                }
+                characters[--size] = null;
+                return true;
+            }
+        }
+        return false;
+    }
     /**
      * this method retrieves a character by name
      * @param name
